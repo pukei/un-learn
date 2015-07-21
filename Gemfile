@@ -26,10 +26,11 @@ gem 'uglifier', '>= 1.3.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'letter_opener', group: :development
+
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug'
-	gem 'rubocop'
   gem 'spring'
 	gem 'sqlite3'
   gem 'web-console', '~> 2.0'
@@ -37,4 +38,9 @@ end
 
 group :production do
 	gem 'pg'
+end
+
+group :test do
+	gem 'simplecov'
+	gem 'rubocop'
 end
